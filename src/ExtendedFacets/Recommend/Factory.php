@@ -27,7 +27,7 @@
  */
 namespace ExtendedFacets\Recommend;
 
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\ServiceManager;
 
 /**
  * Recommendation Module Factory Class
