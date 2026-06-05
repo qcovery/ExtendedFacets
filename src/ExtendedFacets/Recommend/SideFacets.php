@@ -113,7 +113,7 @@ class SideFacets extends \VuFind\Recommend\SideFacets
      */
     public function getFacetSet()
     {
-        $config = $this->configLoader->get('facets');
+        $config = $this->configManager->get('facets');
         $facetSet = \VuFind\Recommend\SideFacets::getFacetSet();
         if (isset($facetSet['publishDate'])) {
             if ($config->SideFacetsExtras->publishDate) {
@@ -135,7 +135,7 @@ class SideFacets extends \VuFind\Recommend\SideFacets
 
     public function extendedFacetActivated($name)
     {
-        $config = $this->configLoader->get('facets');
+        $config = $this->configManager->get('facets');
         return $config->SideFacetsExtras[$name];
     }
 }
